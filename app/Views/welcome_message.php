@@ -215,6 +215,13 @@
             <li class="menu-item hidden"><a
                     href="https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md" target="_blank">Contribute</a>
             </li>
+            <li class="menu-item hidden">
+            <?php if (auth()->loggedIn()): ?>
+                <a href="/logout">Logout</a>
+            <?php else: ?>
+                <a href="/login">Login</a>
+            <?php endif; ?>
+            </li>
         </ul>
     </div>
 
